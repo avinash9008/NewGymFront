@@ -21,6 +21,7 @@ import { MatListModule, MatNavList} from '@angular/material/list'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AttedanceComponent } from './pages/attedance/attedance.component';
 import { PaymentComponent } from './pages/payment/payment.component';
+import { PaymentStatusComponent } from './pages/payment-status/payment-status.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { PaymentComponent } from './pages/payment/payment.component';
     SidenavComponent,
     HeaderComponent,
     AttedanceComponent,
-    PaymentComponent
+    PaymentComponent,
+    PaymentStatusComponent
     
   ],
   imports: [
