@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AttedanceComponent } from './pages/attedance/attedance.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 import { PaymentStatusComponent } from './pages/payment-status/payment-status.component';
+import { TrainerStatusComponent } from './pages/trainer-status/trainer-status.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { PaymentStatusComponent } from './pages/payment-status/payment-status.co
     HeaderComponent,
     AttedanceComponent,
     PaymentComponent,
-    PaymentStatusComponent
+    PaymentStatusComponent,
+    TrainerStatusComponent
     
   ],
   imports: [
