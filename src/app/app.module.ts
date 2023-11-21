@@ -16,12 +16,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule} from '@angular/material/toolbar'
 import { MatMenuModule} from '@angular/material/menu'
 import { MatIcon, MatIconModule} from '@angular/material/icon'
-import { MatDividerModule } from '@angular/material/divider';
+import { MatDivider, MatDividerModule } from '@angular/material/divider';
 import { MatListModule, MatNavList} from '@angular/material/list'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AttedanceComponent } from './pages/attedance/attedance.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 import { PaymentStatusComponent } from './pages/payment-status/payment-status.component';
+import { TrainerStatusComponent } from './pages/trainer-status/trainer-status.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { PaymentStatusComponent } from './pages/payment-status/payment-status.co
     HeaderComponent,
     AttedanceComponent,
     PaymentComponent,
-    PaymentStatusComponent
+    PaymentStatusComponent,
+    TrainerStatusComponent
     
   ],
   imports: [
