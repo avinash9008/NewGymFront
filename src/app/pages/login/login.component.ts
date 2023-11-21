@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { User } from 'src/app/user';
 import { NgForm } from '@angular/forms';
+
+import { Observable } from 'rxjs';
 import { RegistrationService } from 'src/app/service/registration.service';
 
 @Component({
@@ -15,9 +17,11 @@ export class LoginComponent {
 
   login(){
     this.service.loginUser(this.user).subscribe(
-      data=> console.log("response received"),
+      data=> console.log(data),
       error=> console.log("error occured")
     )
   }
+
+
 
 }
