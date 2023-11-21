@@ -1,13 +1,17 @@
 <div class="container">
     <h2>Login</h2>
     <form #loginform="ngForm" (ngSubmit)="login()">
+      <div class="col-md-6">
       <div class="form-group">
         <label for="username">Username</label>
         <input class="form-control" type="text" id="username" [(ngModel)]="user.username" name="username"  required>
       </div>
+      </div>
+      <div class="col-md-6">
       <div class="form-group">
         <label for="password">Password</label>
         <input class="form-control" type="password" id="password" [(ngModel)]="user.password" name="password"  required>
+      </div>
       </div>
       <button class="btn btn-primary" type="submit" routerLink="/dashboard">Login</button>
     </form>
