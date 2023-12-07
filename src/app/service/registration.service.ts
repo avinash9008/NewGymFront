@@ -15,6 +15,7 @@ export class RegistrationService {
 
   constructor(private http: HttpClient) { }
 
+  
   public loginUser(user: User):Observable<any>{
      return this.http.post<any>("http://localhost:8080/authenticate", user);
   }

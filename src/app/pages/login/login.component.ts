@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { User } from 'src/app/user';
 import { NgForm } from '@angular/forms';
+
+import { Observable } from 'rxjs';
 import { RegistrationService } from 'src/app/service/registration.service';
 import { Router } from '@angular/router';
 @Component({
@@ -15,19 +17,11 @@ export class LoginComponent {
 
   login(){
     this.service.loginUser(this.user).subscribe(
-      data=> {
-        console.log(data.jwt);
-        if(data!=null)
-        {
-          const token = data.jwt; // Replace 'your_jwt_token_here' with your actual token
-          localStorage.setItem('JWT', token);
-        }
-        
-        this.router.navigate(['/dashboard']);
-      },
-      
+      data=> console.log(data),
       error=> console.log("error occured")
     )
   }
+
+
 
 }
