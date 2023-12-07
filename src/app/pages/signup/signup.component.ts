@@ -10,22 +10,11 @@ import { RegistrationService } from 'src/app/service/registration.service';
 })
 export class SignupComponent {
 
-  customers:Customers= new Customers();
+  
 
   constructor(private service: RegistrationService, private router:Router){}
 
-  registerCustomersData(){
-    this.service.registerCustomer(this.customers).subscribe(data=>{
-      alert("Customers added successfully");
-      this.goToDashBoardPage()
-    }, error=> alert("Unable to insert data"));
-    
-    };
-
-    goToDashBoardPage(){
-         this.router.navigate(['/dashboard'])
-    }
-
+  
   }
 
 

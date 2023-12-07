@@ -1,9 +1,9 @@
 export class Customers {
     id!:number;
-    name!: string;
+    firstname!: string;
     lastname!: string;
-    session!: string;
-    gympackage!: string;
-    amount!: string;
     phone!: string;
+    session!: string;
+   
+    
 }

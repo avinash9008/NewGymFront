@@ -5,8 +5,9 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { AttedanceComponent } from './pages/attedance/attedance.component';
-import { PaymentComponent } from './pages/payment/payment.component';
+
+import { TrainersComponent } from './pages/trainers/trainers.component';
+import { CustomersComponent } from './pages/customers/customers.component';
 
 
 
@@ -17,8 +18,8 @@ const routes: Routes = [
    {path: 'home', component: HomeComponent},
    {path: 'dashboard', component: DashboardComponent},
    {path: 'dashboard', component:DashboardComponent},
-   {path: 'attedance', component: AttedanceComponent},
-   {path: 'payment', component: PaymentComponent}
+   {path: 'customers', component: CustomersComponent},
+   {path: 'trainers', component:TrainersComponent}
    
 ];
 

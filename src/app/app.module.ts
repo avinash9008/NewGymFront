@@ -7,7 +7,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SidenavComponent } from './pages/sidenav/sidenav.component';
@@ -16,13 +16,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule} from '@angular/material/toolbar'
 import { MatMenuModule} from '@angular/material/menu'
 import { MatIcon, MatIconModule} from '@angular/material/icon'
-import { MatDivider, MatDividerModule } from '@angular/material/divider';
+// import { MatDivider, MatDividerModule } from '@angular/material/divider';
 import { MatListModule, MatNavList} from '@angular/material/list'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AttedanceComponent } from './pages/attedance/attedance.component';
-import { PaymentComponent } from './pages/payment/payment.component';
-import { PaymentStatusComponent } from './pages/payment-status/payment-status.component';
-import { TrainerStatusComponent } from './pages/trainer-status/trainer-status.component';
+import { MatDivider, MatDividerModule } from '@angular/material/divider';
+import { TrainersComponent } from './pages/trainers/trainers.component';
+import { CustomersComponent } from './pages/customers/customers.component';
+//import {JwtInterceptor} from './util/jwt-interceptor';
+
 
 
 @NgModule({
@@ -34,10 +35,10 @@ import { TrainerStatusComponent } from './pages/trainer-status/trainer-status.co
     HomeComponent,
     SidenavComponent,
     HeaderComponent,
-    AttedanceComponent,
-    PaymentComponent,
-    PaymentStatusComponent,
-    TrainerStatusComponent
+    TrainersComponent,
+    CustomersComponent,
+    
+
     
   ],
   imports: [
@@ -54,7 +55,13 @@ import { TrainerStatusComponent } from './pages/trainer-status/trainer-status.co
     MatIconModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: JwtInterceptor,
+    //   multi: true,
+    // }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

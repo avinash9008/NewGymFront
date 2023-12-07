@@ -1,0 +1,14 @@
+<div *ngIf="trainers.length > 0; else noTrainers">
+    <h2>List of Trainers</h2>
+    <ul>
+      <li *ngFor="let trainer of trainers">
+        <p>Name: {{ trainer.name }}</p>
+        <p>Phone: {{ trainer.phone }}</p>
+        <!-- Display other trainer details -->
+      </li>
+    </ul>
+  </div>
+  
+  <ng-template #noTrainers>
+    <p>No trainers available</p>
+  </ng-template>
