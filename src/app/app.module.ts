@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,7 +22,8 @@ import { AttedanceComponent } from './pages/attedance/attedance.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 import { PaymentStatusComponent } from './pages/payment-status/payment-status.component';
 import { TrainerStatusComponent } from './pages/trainer-status/trainer-status.component';
-
+import { CustomersComponent } from './pages/customers/customers.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,8 @@ import { TrainerStatusComponent } from './pages/trainer-status/trainer-status.co
     AttedanceComponent,
     PaymentComponent,
     PaymentStatusComponent,
-    TrainerStatusComponent
+    TrainerStatusComponent,
+    CustomersComponent
     
   ],
   imports: [
@@ -52,7 +53,8 @@ import { TrainerStatusComponent } from './pages/trainer-status/trainer-status.co
     MatDividerModule,
     MatListModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

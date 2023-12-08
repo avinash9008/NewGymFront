@@ -1,55 +1,21 @@
 <div class="container">
-  <h2>Customer Registration</h2>
-  <form (ngSubmit)="registerCustomersData()">
-    <div class="row">
+    <h2>SignUp</h2>
+    <form #loginform="ngForm" (ngSubmit)="saveCustomers()">
       <div class="col-md-6">
-        <div class="form-group">
-          <label for="username">Name</label>
-          <input class="form-control" type="text" id="name" name="name" required [(ngModel)]="customers.name">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="username">Last Name</label>
-          <input class="form-control" type="text" id="lastname" name="lastname" required [(ngModel)]="customers.lastname">
-        </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input class="form-control" type="text" id="username" [(ngModel)]="user.username" name="username"  required>
       </div>
     </div>
-
-    <div class="row">
       <div class="col-md-6">
-        <div class="form-group">
-          <label for="password">Session</label>
-          <input class="form-control" type="text" id="session" name="session" required [(ngModel)]="customers.session">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="password">GymPackage</label>
-          <input class="form-control" type="text" id="gympackage" name="gympackage" required [(ngModel)]="customers.gympackage">
-        </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" id="password" [(ngModel)]="user.password" name="password"  required>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="password">Amount</label>
-          <input class="form-control" type="text" id="amount" name="amount" required [(ngModel)]="customers.amount">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="username">Phone No</label>
-          <input class="form-control" type="text" id="phone" name="phone" required [(ngModel)]="customers.phone">
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <button class="btn btn-primary" type="submit">Register</button>
-      </div>
-    </div>
-  </form>
-</div>
+      <button class="btn btn-primary" type="submit" >Signup</button>
+  
+      
+    </form> <!-- Added form closing tag -->
+  </div>
+  

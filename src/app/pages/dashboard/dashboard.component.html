@@ -1,1 +1,23 @@
-<p>dashboard works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th >Firstname</th>
+        <th >Lastname</th>
+        <th >Session</th>
+        <th >Phone</th>
+        <th>Joining Date</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Customer of customers">
+        <th >{{Customer.firstname}}</th>
+        <td>{{Customer.lastname}}</td>
+        <td>{{Customer.session}}</td>
+        <td>{{Customer.phone}}</td>
+        <td>{{Customer.joiningDate}}</td>
+        <td>{{Customer.amount}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
