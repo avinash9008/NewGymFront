@@ -24,6 +24,7 @@ import { PaymentStatusComponent } from './pages/payment-status/payment-status.co
 import { TrainerStatusComponent } from './pages/trainer-status/trainer-status.component';
 import { CustomersComponent } from './pages/customers/customers.component';
 import { CommonModule } from '@angular/common';
+import { UpdateCustomersComponent } from './pages/update-customers/update-customers.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CommonModule } from '@angular/common';
     PaymentComponent,
     PaymentStatusComponent,
     TrainerStatusComponent,
-    CustomersComponent
+    CustomersComponent,
+    UpdateCustomersComponent
     
   ],
   imports: [

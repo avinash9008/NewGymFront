@@ -14,7 +14,7 @@ export class SignupComponent {
   user: User= new User();
   constructor(private service: RegistrationService, private router:Router){}
 
-  saveCustomers(){
+  saveUser(){
     this.service.signUpUser(this.user).subscribe(
       Response =>{
         alert("User added sucessfully")
@@ -23,7 +23,7 @@ export class SignupComponent {
         console.log(this.user);
       },
       error =>{
-        console.log("Error", error);
+        alert("Error Occured")
       }
     )
     

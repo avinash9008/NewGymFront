@@ -36,5 +36,17 @@ export class DashboardComponent {
     console.log(error);
    } )
   }
+  deleteCustomers(phone:string){
+    this.service.deleteCustomer(phone).subscribe(
+      Response =>{
+        console.log("customers deleted")
+      },
+      error =>{
+        alert("error")
+      }
+    )
+
+  }
+ 
 
 }

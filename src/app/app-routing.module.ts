@@ -8,6 +8,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AttedanceComponent } from './pages/attedance/attedance.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 import { CustomersComponent } from './pages/customers/customers.component';
+import { UpdateCustomersComponent } from './pages/update-customers/update-customers.component';
 
 
 
@@ -19,7 +20,8 @@ const routes: Routes = [
    {path: 'dashboard', component:DashboardComponent},
    {path: 'attedance', component: AttedanceComponent},
    {path: 'payment', component: PaymentComponent},
-  {path: 'customers', component: CustomersComponent}
+  {path: 'customers', component: CustomersComponent},
+  {path: 'updateCustomer/:phone', component: UpdateCustomersComponent}
 
    
 ];

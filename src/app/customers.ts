@@ -6,4 +6,5 @@ export class Customers {
     phone: string= '';
     joiningDate: string='';
     amount: string='';
+    email: string='';
 }

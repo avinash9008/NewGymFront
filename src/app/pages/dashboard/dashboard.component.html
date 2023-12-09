@@ -7,17 +7,23 @@
         <th >Phone</th>
         <th>Joining Date</th>
         <th>Amount</th>
+        <th>Email</th>
+        <th>Action</th>
+        
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let Customer of customers">
-        <th >{{Customer.firstname}}</th>
+        <td >{{Customer.firstname}}</td>
         <td>{{Customer.lastname}}</td>
         <td>{{Customer.session}}</td>
         <td>{{Customer.phone}}</td>
         <td>{{Customer.joiningDate}}</td>
         <td>{{Customer.amount}}</td>
-        <td></td>
+        <td>{{Customer.email}}</td>
+        <td><button type="button" class="btn btn-info" routerLink="/updateCustomer/{{Customer.phone}}">Edit</button></td>
+        <td><button type="button" class="btn btn-info" (click)="deleteCustomers(Customer.phone)">Delete</button></td>
+
       </tr>
      
     </tbody>

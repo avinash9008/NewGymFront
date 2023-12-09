@@ -15,13 +15,16 @@ export class LoginComponent {
 
   constructor(private service: RegistrationService){}
 
-  login(){
+  saveUser(){
     this.service.loginUser(this.user).subscribe(
-      data=> console.log(data),
-      error=> console.log("error occured")
+      Response =>{
+        alert("User added sucessfully")
+        console.log(this.user);
+      },
+      error =>{
+        alert("Error Occured")
+      }
     )
-  }
-
-
-
+    
+}
 }

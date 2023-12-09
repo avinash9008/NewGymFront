@@ -27,4 +27,11 @@ export class RegistrationService {
     return this.http.get<Customers[]>("http://localhost:8080/api/cust/get");
   }
 
+  updateCustomers(phone: string, updateData: Customers): Observable<any> {
+    return this.http.put<any>(`http://localhost:8080/api/cust/update/${phone}`, updateData);
+  }
+  deleteCustomer(phone:string):Observable<Customers>{
+    return this.http.delete<Customers>(`http://localhost:8080/api/cust/delete/${phone}`)
+  }
+
 }

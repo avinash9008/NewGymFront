@@ -1,6 +1,6 @@
 <div class="container">
-    <h2>Add Customers</h2>
-    <form #loginform="ngForm" (ngSubmit)="saveCustomer()">
+    <h2>Update Customers</h2>
+    <form (ngSubmit)="updateCustomer(customers.phone, customers)">
       <div class="row">  
       <div class="col-md-6">
       <div class="form-group">
@@ -46,16 +46,15 @@
           </div>
         </div>
         <div class="row">  
-          <div class="col-md-6">
-              <div class="form-group">
-                <label for="username">Email</label>
-                <input class="form-control" type="text" id="joiningDate" [(ngModel)]="customers.email" name="joiningDate"  required>
+            <div class="col-md-6">
+                <div class="form-group">
+                  <label for="username">Email</label>
+                  <input class="form-control" type="text" id="joiningDate" [(ngModel)]="customers.email" name="joiningDate"  required>
+                </div>
               </div>
+                
             </div>
-              
-          </div>
-
-      <button class="btn btn-primary" type="submit" >Add Customers</button>
+      <button class=" btn btn-primary" type="submit" >Submit</button>
   
       
     </form> <!-- Added form closing tag -->

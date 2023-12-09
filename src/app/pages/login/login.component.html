@@ -1,6 +1,6 @@
 <div class="container">
   <h2>Login</h2>
-  <form #loginform="ngForm" (ngSubmit)="login()">
+  <form #loginform="ngForm" (ngSubmit)="saveUser()">
     <div class="col-md-6">
     <div class="form-group">
       <label for="username">Username</label>
@@ -13,7 +13,7 @@
       <input class="form-control" type="password" id="password" [(ngModel)]="user.password" name="password"  required>
     </div>
   </div>
-    <button class="btn btn-primary" type="submit" routerLink="/dashboard">Login</button>
+    <button class="btn btn-primary" type="submit" >Login</button>
 
     <div class="signup-link">
       <p>Don't have an account? <a routerLink="/signup">Signup</a></p>
