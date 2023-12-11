@@ -17,6 +17,10 @@ export class CustomersComponent {
           this.service.addCustomer(this.customers).subscribe(
             Response =>{
               console.log(this.customers);
+              alert("Customer added successfully")
+            },
+            error =>{
+              alert("Error occured")
             }
           )
   }
