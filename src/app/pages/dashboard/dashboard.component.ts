@@ -18,15 +18,7 @@ export class DashboardComponent {
     this.getCustomers();
   }
 
-  // fetchCustomers(): void {
-  //   this.service.getCustomers()
-  //     .subscribe((data: Customers[]) => {
-  //       this.customers = data;
-  //     }, error => {
-  //       console.error('Error fetching customers:', error);
-  //       // Handle error, show error message, etc.
-  //     });
-  // }
+
 
   getCustomers(){
     this.service.getCustomers().subscribe((data:Customers[]) =>{
@@ -36,7 +28,7 @@ export class DashboardComponent {
     console.log(error);
    } )
   }
-  deleteCustomers(phone:string){
+   deleteCustomers(phone:string){
     this.service.deleteCustomer(phone).subscribe(
       Response =>{
         console.log("customers deleted")

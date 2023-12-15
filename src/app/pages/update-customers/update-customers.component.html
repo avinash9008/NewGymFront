@@ -1,17 +1,18 @@
 <div class="container">
     <h2>Update Customers</h2>
-    <form (ngSubmit)="updateCustomer(customers.phone, customers)">
+    <form (submit)="onSubmit()">
+      <div *ngIf="customer">
       <div class="row">  
       <div class="col-md-6">
       <div class="form-group">
         <label for="username">Firstname</label>
-        <input class="form-control" type="text" id="firstname" [(ngModel)]="customers.firstname" name="firstname"  required>
+        <input class="form-control" type="text" id="firstname" [(ngModel)]="customer.firstname" name="firstname"  required>
       </div>
     </div>
       <div class="col-md-6">
       <div class="form-group">
         <label for="password">Lastname</label>
-        <input class="form-control" type="text" id="lastname" [(ngModel)]="customers.lastname" name="lastname"  required>
+        <input class="form-control" type="text" id="lastname" [(ngModel)]="customer.lastname" name="lastname"  required>
       </div>
     </div>
 </div>
@@ -20,13 +21,13 @@
     <div class="col-md-6">
         <div class="form-group">
           <label for="username">Session</label>
-          <input class="form-control" type="text" id="session" [(ngModel)]="customers.session" name="session"  required>
+          <input class="form-control" type="text" id="session" [(ngModel)]="customer.session" name="session"  required>
         </div>
       </div>
         <div class="col-md-6">
         <div class="form-group">
           <label for="password">Phone</label>
-          <input class="form-control" type="text" id="phone" [(ngModel)]="customers.phone" name="phone"  required>
+          <input class="form-control" type="text" id="phone" [(ngModel)]="customer.phone" name="phone"  required>
         </div>
       </div>
     </div>
@@ -35,28 +36,28 @@
         <div class="col-md-6">
             <div class="form-group">
               <label for="username">Joining Data</label>
-              <input class="form-control" type="date" id="joiningDate" [(ngModel)]="customers.joiningDate" name="joiningDate"  required>
+              <input class="form-control" type="date" id="joiningDate" [(ngModel)]="customer.joiningDate" name="joiningDate"  required>
             </div>
           </div>
             <div class="col-md-6">
             <div class="form-group">
               <label for="password">Amount</label>
-              <input class="form-control" type="text" id="amount" [(ngModel)]="customers.amount" name="amount"  required>
+              <input class="form-control" type="text" id="amount" [(ngModel)]="customer.amount" name="amount"  required>
             </div>
           </div>
         </div>
         <div class="row">  
             <div class="col-md-6">
                 <div class="form-group">
-                  <label for="username">Email</label>
-                  <input class="form-control" type="text" id="joiningDate" [(ngModel)]="customers.email" name="joiningDate"  required>
+                  <label for="email">Email</label>
+                  <input class="form-control" type="email" id="email" [(ngModel)]="customer.email" name="email"  required>
                 </div>
               </div>
                 
             </div>
-      <button class=" btn btn-primary" type="submit" >Submit</button>
+      <button class=" btn btn-primary" type="submit"  >Submit</button>
   
-      
+    </div>
     </form> <!-- Added form closing tag -->
   </div>
   

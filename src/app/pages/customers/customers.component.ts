@@ -11,6 +11,7 @@ export class CustomersComponent {
 
   customers: Customers = new Customers();
   
+  
   constructor(private service: RegistrationService){}
 
   public saveCustomer(){
@@ -25,6 +26,5 @@ export class CustomersComponent {
           )
   }
 
-
-
+ 
 }

@@ -21,8 +21,8 @@
         <td>{{Customer.joiningDate}}</td>
         <td>{{Customer.amount}}</td>
         <td>{{Customer.email}}</td>
-        <td><button type="button" class="btn btn-info" routerLink="/updateCustomer/{{Customer.phone}}">Edit</button></td>
-        <td><button type="button" class="btn btn-info" (click)="deleteCustomers(Customer.phone)">Delete</button></td>
+        <td><button type="button" class="btn btn-info" [routerLink]="['/updateCustomer', Customer.phone, Customer]" >Edit</button></td>
+        <td><button type="button" class="btn btn-info" (onClick)="deleteCustomers(Customer.phone)">Delete</button></td>
 
       </tr>
      

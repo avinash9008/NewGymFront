@@ -22,9 +22,9 @@ import { AttedanceComponent } from './pages/attedance/attedance.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 import { PaymentStatusComponent } from './pages/payment-status/payment-status.component';
 import { TrainerStatusComponent } from './pages/trainer-status/trainer-status.component';
-import { CustomersComponent } from './pages/customers/customers.component';
 import { CommonModule } from '@angular/common';
 import { UpdateCustomersComponent } from './pages/update-customers/update-customers.component';
+import { CustomersComponent } from './pages/customers/customers.component';
 
 @NgModule({
   declarations: [
