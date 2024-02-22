@@ -11,11 +11,13 @@ import { CommonModule } from '@angular/common';
 export class DashboardComponent {
 
   customers : Customers[]=[];
+  searchQuery: string = '';
 
   constructor(private service: RegistrationService){}
 
   ngOnInit(): void {
     this.getCustomers();
+    
   }
 
 
@@ -38,6 +40,18 @@ export class DashboardComponent {
       }
     )
 
+  }
+
+  get filteredCustomers(): any[] {
+    if (!this.searchQuery.trim()) {
+      // If search query is empty, display all customers
+      return this.customers;
+    } else {
+      // Filter customers based on search query (you can modify this logic as needed)
+      return this.customers.filter(customer =>
+        customer.firstname.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    }
   }
  
 

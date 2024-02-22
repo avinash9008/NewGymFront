@@ -1,4 +1,9 @@
+<div>
+  <label for="search">Search Customers:</label>
+  <input type="search" id="search" placeholder="Search customers by name..." [(ngModel)]="searchQuery" >
+</div>
 <table class="table">
+  
     <thead>
       <tr>
         <th >Firstname</th>
@@ -13,7 +18,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let Customer of customers">
+      <tr *ngFor="let Customer of filteredCustomers">
         <td >{{Customer.firstname}}</td>
         <td>{{Customer.lastname}}</td>
         <td>{{Customer.session}}</td>
